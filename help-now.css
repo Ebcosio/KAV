@@ -24,16 +24,17 @@
 }
     
     input.thickbox{color: red; padding: 10px; border-radius: 7px 7px 7px 7px; font-weight: bold; cursor: pointer;}
-    
-    
     .pop-up-content{overflow: auto; padding: 20px; margin: 5px; height: auto;}
     
     @media only screen and (min-width: 601px) { 
         div.sticky-bar{width: 270px;  border-radius: 0 7px 7px 0}
     }
     
-     @media only screen and (max-width: 401px) {  
+
+@media only screen and (max-width: 401px) {  
         
      .pop-up-content{width: 250px; margin-right: auto; margin-left: auto; padding: 5px; overflow: scroll;}
 
     }
+
+    
