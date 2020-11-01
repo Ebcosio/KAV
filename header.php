@@ -189,6 +189,26 @@ $header_style = (isset($options['header_layout'])) ? $options['header_layout'] :
 	echo '}';
 	echo '</style>';
 	?>
+	
+	    
+<script>
+        
+    function setInputElement(classname, popUpName){
+        var viewPortwidth = Math.min(document.documentElement.clientWidth || 300, window.innerWidth || 300);
+    
+    // set viewPortwidth to 75% on all screens above 300 pixels
+        if(viewPortwidth > 300){viewPortwidth = viewPortwidth * .75;}
+    
+        // set 'alt' attribute of thickbox input element with values of width and ID of the popup div
+      var altText = '#TB_inline?' + 'height=300&amp;' + 'width=' + viewPortwidth.toString() + '&amp;' + 'inlineId=' + popUpName;      
+        
+      var inputElement = document.getElementsByClassName(classname)[0];
+        inputElement.setAttribute("alt", altText);
+      
+    }
+    
+        </script>
+
 	<div class="body">
 		<?php echo get_template_part('header', $header_style); ?>
 		
@@ -201,6 +221,9 @@ $header_style = (isset($options['header_layout'])) ? $options['header_layout'] :
     <p>Talk to the Veteran's Crisis Line Now</p>
 
 </div>
+<script>
+       setInputElement("thickbox", 'Popup1');
+        </script>
 </div>
 <div id="Popup1" style="display: none;">
 <div class="pop-up-content">
@@ -217,6 +240,7 @@ or text <span class="bold">HOME</span> to <span class="bold">741741</span> for w
 
 </div>
 </div>
+
 
 
 
