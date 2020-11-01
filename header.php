@@ -193,7 +193,7 @@ $header_style = (isset($options['header_layout'])) ? $options['header_layout'] :
 	    
 <script>
         
-    function setInputElement(classname, popUpName){
+    function setThickBoxElement(classname, popUpName){
         var viewPortwidth = Math.min(document.documentElement.clientWidth || 300, window.innerWidth || 300);
     
     // set viewPortwidth to 75% on all screens above 300 pixels
@@ -215,14 +215,19 @@ $header_style = (isset($options['header_layout'])) ? $options['header_layout'] :
 		
 		<div class="sticky-bar">
 
-<input class="thickbox" title="" alt="#TB_inline?height=300&amp;width=300&amp;inlineId=Popup1" type="button" value="Need Help Now?" />
+<input class="thickbox" title="" alt="" type="button" value="Need Help Now?" />
+
+            <noscript>
+                <input class="thickbox" title="" alt="#TB_inline?height=300&amp;width=300&amp;inlineId=Popup1" type="button" value="Need Help Now?" />
+            </noscript>
+
 <div class="sticky-bar-text">
 
     <p>Talk to the Veteran's Crisis Line Now</p>
 
 </div>
 <script>
-       setInputElement("thickbox", 'Popup1');
+       setThickBoxElement("thickbox", 'Popup1');
         </script>
 </div>
 <div id="Popup1" style="display: none;">
