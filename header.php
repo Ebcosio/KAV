@@ -193,7 +193,7 @@ $header_style = (isset($options['header_layout'])) ? $options['header_layout'] :
 	    
 <script>
         
-    function setThickBoxElement(classname, popUpName){
+    function setThickBoxElement(IDname, popUpName){
         var viewPortwidth = Math.min(document.documentElement.clientWidth || 300, window.innerWidth || 300);
     
     // set viewPortwidth to 75% on all screens above 300 pixels
@@ -202,7 +202,8 @@ $header_style = (isset($options['header_layout'])) ? $options['header_layout'] :
         // set 'alt' attribute of thickbox input element with values of width and ID of the popup div
       var altText = '#TB_inline?' + 'height=300&amp;' + 'width=' + viewPortwidth.toString() + '&amp;' + 'inlineId=' + popUpName;      
         
-      var inputElement = document.getElementsByClassName(classname)[0];
+     // var inputElement = document.getElementsByClassName(classname)[0];
+	    var inputElement = document..getElementById(IDname);
         inputElement.setAttribute("alt", altText);
       
     }
@@ -218,7 +219,7 @@ $header_style = (isset($options['header_layout'])) ? $options['header_layout'] :
 <input class="thickbox" title="" alt="" type="button" value="Need Help Now?" />
 
             <noscript>
-                <input class="thickbox" title="" alt="#TB_inline?height=300&amp;width=300&amp;inlineId=Popup1" type="button" value="Need Help Now?" />
+                <input class="thickbox" id="help-now" title="" alt="#TB_inline?height=300&amp;width=300&amp;inlineId=Popup1" type="button" value="Need Help Now?" />
             </noscript>
 
 <div class="sticky-bar-text">
@@ -227,7 +228,7 @@ $header_style = (isset($options['header_layout'])) ? $options['header_layout'] :
 
 </div>
 <script>
-       setThickBoxElement("thickbox", 'Popup1');
+       setThickBoxElement("help-now", 'Popup1');
         </script>
 </div>
 <div id="Popup1" style="display: none;">
