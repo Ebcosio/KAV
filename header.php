@@ -203,7 +203,7 @@ $header_style = (isset($options['header_layout'])) ? $options['header_layout'] :
       var altText = '#TB_inline?' + 'height=300&amp;' + 'width=' + viewPortwidth.toString() + '&amp;' + 'inlineId=' + popUpName;      
         
      // var inputElement = document.getElementsByClassName(classname)[0];
-	    var inputElement = document..getElementById(IDname);
+	    var inputElement = document.getElementById(IDname);
         inputElement.setAttribute("alt", altText);
       
     }
