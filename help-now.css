@@ -35,5 +35,5 @@
      @media only screen and (max-width: 401px) {  
         
      .pop-up-content{width: 250px; margin-right: auto; margin-left: auto; padding: 5px; overflow: scroll;}
-
+       div.sticky-bar{height: 4em;}
     }
